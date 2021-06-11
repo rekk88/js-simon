@@ -5,7 +5,13 @@ var numbers = [];
 //genero 5 numeri random
 for(var i=0 ; i < 5 ; i++){
     random = rand(min, max);
-    numbers.push(random); 
+    //eliminazione dei duplicati
+    if(!numbers.includes(random)){
+        numbers.push(random); 
+    }
+    else{
+        i--;
+    }
 }
 console.log(numbers);
 alert(numbers); //output di 5 numeri
